@@ -1,3 +1,21 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+
+
+
+
+var bio = {
+    "name" : "Gabriel",
+    "role" : "Student"
+};
+
+$("#main").append("Gabriel");
+
+
+var formattedName = HTMLheaderName.replace("%data%", "Gabriel");
+var formattedRole = HTMLheaderRole.replace("%data%", "WebDeveloper");
+
+
+$("#header").append(formattedName);
+$("#header").append(formattedRole);
+
+
+
