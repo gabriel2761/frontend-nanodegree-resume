@@ -10,13 +10,21 @@ var bio = {
 		"location": "Sydney, Australia"
 	},
 	"welcomeMessage": "Welcome to my portfolio",
-	"skills": ["Javascript", "HTML5", "CSS3", "Sass", "Git", "Java", "Bash"],
+	"skills": ["Javascript", "HTML5", "CSS3", "Sass", "Bootstrap", "JQuery", "Git", "Polymer", "Java", "Bash"],
 	"biopic": "What is this?",
-	"display": function() {}
+	"display": displayWork
 };
 
 var work = {
-	"jobs": [
+	"jobs": 
+	[
+		{
+			"employer": "ParkTrent Properties Group",
+			"title": "Face-to-Face Promotions",
+			"location": "Sydney, Australia",
+			"dates": "2012-9-10",
+			"description": "Promoting a real estate seminar"
+		},
 		{
 			"employer": "ParkTrent Properties Group",
 			"title": "Face-to-Face Promotions",
@@ -62,7 +70,6 @@ var projects = {
 	]
 };
 
-
 var name = HTMLheaderName.replace("%data%", bio.name);
 var role = HTMLheaderRole.replace("%data%", bio.role);
 
@@ -71,6 +78,7 @@ $("#header").append(role);
 
 
 if (bio.skills.length > 0) {
+	
 	$("#header").append(HTMLskillsStart);
 
 	bio.skills.forEach(function(skill) {
@@ -78,12 +86,31 @@ if (bio.skills.length > 0) {
 	});
 }
 
-if (work.jobs.length > 0) {
-	$("#workExperience").append(HTMLworkStart);
-	work.jobs.forEach(function(job) {
-		$("")
-	});
+
+
+
+var displayWork = function() {
+	if (work.jobs.length > 0) {
+	
+		work.jobs.forEach(function(job) {
+
+			var employer = HTMLworkEmployer.replace("%data%", job.employer);
+			var title = HTMLworkTitle.replace("%data%", job.title);
+			var dates = HTMLworkDates.replace("%data%", job.dates)
+			var description = HTMLworkDescription.replace("%data%", job.description);
+			var location = HTMLworkLocation.replace("%data%", job.location);
+
+			$("#workExperience").append(HTMLworkStart);
+			$(".work-entry:last").append(employer + title);
+			$(".work-entry:last").append(dates);
+			$(".work-entry:last").append(location);
+			$(".work-entry:last").append(description);
+
+		});
+	}
 }
+
+bio.display
 
 
 
