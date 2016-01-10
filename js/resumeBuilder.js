@@ -74,22 +74,22 @@ education.display = function() {
 
     school.majors.forEach(function(major) {
       var subject = HTMLschoolMajor.replace("%data%", major);
-      $(".education-entry:last").append(subject);
+
     });
   });
 
-	this.onlineCourses.forEach(function(course) {
-		var title = HTMLonlineTitle.replace("%data%", course.title);
-		var school = HTMLonlineSchool.replace("%data%", course.school);
-		var dates = HTMLonlineDates.replace("%data%", course.dates);
-		var url = HTMLonlineURL.replace("%data%", course.url);
+  this.onlineCourses.forEach(function(course) {
+    var title = HTMLonlineTitle.replace("%data%", course.title);
+    var school = HTMLonlineSchool.replace("%data%", course.school);
+    var dates = HTMLonlineDates.replace("%data%", course.dates);
+    var url = HTMLonlineURL.replace("%data%", course.url);
 
-		$("#education").append(HTMLonlineClasses);
-		$("#education").append(title + school);
-		$("#education").append(dates);
-		$("#education").append(url);
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(title + school);
+    $("#education").append(dates);
+    $("#education").append(url);
 
-	});
+  });
 };
 
 
