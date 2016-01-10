@@ -56,17 +56,17 @@ bio.display = function() {
   var name = HTMLheaderName.replace("%data%", this.name);
   var role = HTMLheaderRole.replace("%data%", this.role);
 
-	var mobile = HTMLmobile.replace("%data%", this.contacts.mobile);
-	var email = HTMLemail.replace("%data%", this.contacts.email);
-	var github = HTMLgithub.replace("%data%", this.contacts.github);
-	var location = HTMLlocation.replace("%data%", this.contacts.location);
+  var mobile = HTMLmobile.replace("%data%", this.contacts.mobile);
+  var email = HTMLemail.replace("%data%", this.contacts.email);
+  var github = HTMLgithub.replace("%data%", this.contacts.github);
+  var location = HTMLlocation.replace("%data%", this.contacts.location);
   var biopic = HTMLbioPic.replace("%data%", this.biopic);
   var welcomeMessage = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
 
   $("#header").prepend(name + role);
-	$("#topContacts").append(email);
-	$("#topContacts").append(github);
-	$("#topContacts").append(location);
+  $("#topContacts").append(email);
+  $("#topContacts").append(github);
+  $("#topContacts").append(location);
 
   $("#header").append(biopic);
   $("#header").append(welcomeMessage);
@@ -97,20 +97,20 @@ education.display = function() {
     });
   });
 
-	if (this.onlineCourses.length > 0) {
-		$("#education").append(HTMLonlineClasses);
-	  this.onlineCourses.forEach(function(course) {
-	    var title = HTMLonlineTitle.replace("%data%", course.title);
-	    var school = HTMLonlineSchool.replace("%data%", course.school);
-	    var dates = HTMLonlineDates.replace("%data%", course.dates);
-	    var url = HTMLonlineURL.replace("#", course.url).replace("%data%", "info");
+  if (this.onlineCourses.length > 0) {
+    $("#education").append(HTMLonlineClasses);
+    this.onlineCourses.forEach(function(course) {
+      var title = HTMLonlineTitle.replace("%data%", course.title);
+      var school = HTMLonlineSchool.replace("%data%", course.school);
+      var dates = HTMLonlineDates.replace("%data%", course.dates);
+      var url = HTMLonlineURL.replace("#", course.url).replace("%data%", "info");
 
-	    $("#education").append(HTMLschoolStart);
-	    $(".education-entry:last").append(title + school);
-	    $(".education-entry:last").append(dates);
-	    $(".education-entry:last").append(url);
-	  });
-	}
+      $("#education").append(HTMLschoolStart);
+      $(".education-entry:last").append(title + school);
+      $(".education-entry:last").append(dates);
+      $(".education-entry:last").append(url);
+    });
+  }
 };
 
 work.display = function() {
