@@ -24,11 +24,11 @@ var education = {
     "url": "http://handbook.uts.edu.au/courses/c10345.html"
   }],
   "onlineCourses": [{
-    "title": "Front-end Developer",
+    "title": "Front-End Developer Nanodegree",
     "school": "Udacity",
     "dates": "2016-1-5 - present",
     "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-  }],
+  }]
 };
 
 var work = {
@@ -62,7 +62,7 @@ bio.display = function() {
 
 education.display = function() {
   this.schools.forEach(function(school) {
-    var name = HTMLschoolName.replace("%data%", school.name);
+    var name = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
     var dates = HTMLschoolDates.replace("%data%", school.dates);
     var degree = HTMLschoolDegree.replace("%data%", school.degree);
     var location = HTMLschoolLocation.replace("%data%", school.location);
@@ -74,22 +74,25 @@ education.display = function() {
 
     school.majors.forEach(function(major) {
       var subject = HTMLschoolMajor.replace("%data%", major);
-
+      $(".education-entry:last").append(subject);
     });
   });
 
-  this.onlineCourses.forEach(function(course) {
-    var title = HTMLonlineTitle.replace("%data%", course.title);
-    var school = HTMLonlineSchool.replace("%data%", course.school);
-    var dates = HTMLonlineDates.replace("%data%", course.dates);
-    var url = HTMLonlineURL.replace("%data%", course.url);
+	if (this.onlineCourses.length > 0) {
+		$("#education").append(HTMLonlineClasses);
+	  this.onlineCourses.forEach(function(course) {
+	    var title = HTMLonlineTitle.replace("%data%", course.title);
+	    var school = HTMLonlineSchool.replace("%data%", course.school);
+	    var dates = HTMLonlineDates.replace("%data%", course.dates);
+	    var url = HTMLonlineURL.replace("#", course.url).replace("%data%", "info");
+	    console.log(url);
 
-    $("#education").append(HTMLonlineClasses);
-    $("#education").append(title + school);
-    $("#education").append(dates);
-    $("#education").append(url);
-
-  });
+	    $("#education").append(HTMLschoolStart);
+	    $(".education-entry:last").append(title + school);
+	    $(".education-entry:last").append(dates);
+	    $(".education-entry:last").append(url);
+	  });
+	}
 };
 
 
@@ -117,10 +120,10 @@ projects.display = function() {
     var image = HTMLprojectImage.replace("%data%", project.image);
 
     $("#projects").append(HTMLprojectStart);
-    $(".project-entry").append(title);
-    $(".project-entry").append(date);
-    $(".project-entry").append(description);
-    $(".project-entry").append(image);
+    $(".project-entry:last").append(title);
+    $(".project-entry:last").append(date);
+    $(".project-entry:last").append(description);
+    $(".project-entry:last").append(image);
   });
 };
 
