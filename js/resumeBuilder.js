@@ -1,5 +1,4 @@
 
-
 var bio = {
 	"name": "Gabriel Mojica",
 	"role": "Student",
@@ -10,7 +9,7 @@ var bio = {
 		"location": "Sydney, Australia"
 	},
 	"welcomeMessage": "Welcome to my portfolio",
-	"skills": ["Javascript", "HTML5", "CSS3", "Sass", "Bootstrap", "JQuery", "Git", "Polymer", "Java", "Bash"],
+	"skills": ["Javascript", "HTML5", "CSS3", "Sass", "Bootstrap", "JQuery", "Git", "Polymer", "Php", "Java", "Bash"],
 	"biopic": "What is this?",
 	"display": function() { }
 };
@@ -62,6 +61,7 @@ var projects = {
 		}
 	]
 };
+
 
 var name = HTMLheaderName.replace("%data%", bio.name);
 var role = HTMLheaderRole.replace("%data%", bio.role);
@@ -127,3 +127,6 @@ projects.display = function() {
 }
 
 projects.display();
+
+
+$("#mapDiv").append(googleMap);
