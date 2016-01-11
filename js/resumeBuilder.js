@@ -38,7 +38,7 @@ var work = {
     "location": "Sydney, Australia",
     "dates": "2012 September - 2012 December",
     "description": "Handing out flyers in Sydney CBD to promote a real estate seminar",
-    "url" : "http://parktrent.com.au/seminars/upcoming-seminars/"
+    "url": "http://parktrent.com.au/seminars/upcoming-seminars/"
   }],
 };
 
