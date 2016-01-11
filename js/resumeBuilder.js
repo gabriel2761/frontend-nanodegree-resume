@@ -47,7 +47,8 @@ var projects = {
     "title": "Front-End Portfolio",
     "dates": "2016 January",
     "description": "Create a page to feature web development projects",
-    "image": ["https://placehold.it/60x60"]
+    "image": ["https://placehold.it/60x60"],
+    "url": "https://github.com/gabriel2761/Udacity-Front-End-Project-1.git"
   }]
 };
 
@@ -113,7 +114,7 @@ education.display = function() {
   if (this.onlineCourses.length > 0) {
     $("#education").append(HTMLonlineClasses);
     this.onlineCourses.forEach(function(course) {
-      var title = HTMLonlineTitle.replace("%data%", course.title);
+      var title = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.url);
       var school = HTMLonlineSchool.replace("%data%", course.school);
       var dates = HTMLonlineDates.replace("%data%", course.dates);
       var url = HTMLonlineURL.replace("#", course.url).replace("%data%", "info");
@@ -150,7 +151,7 @@ work.display = function() {
  */
 projects.display = function() {
   this.projects.forEach(function(project) {
-    var title = HTMLprojectTitle.replace("%data%", project.title);
+    var title = HTMLprojectTitle.replace("%data%", project.title).replace("#", project.url);
     var dates = HTMLprojectDates.replace("%data%", project.dates);
     var description = HTMLprojectDescription.replace("%data%", project.description);
     var image = HTMLprojectImage.replace("%data%", project.image);
