@@ -51,8 +51,13 @@ var projects = {
   }]
 };
 
+
 /* DISPLAY FUNCTIONS FOR JSON OBJECTS */
 
+
+/**
+ * @description Appends bio JSON data to index.html
+ */
 bio.display = function() {
   var name = HTMLheaderName.replace("%data%", this.name);
   var role = HTMLheaderRole.replace("%data%", this.role);
@@ -84,6 +89,9 @@ bio.display = function() {
 
 };
 
+/**
+ * @description Appends education JSON data to index.html
+ */
 education.display = function() {
   this.schools.forEach(function(school) {
     var name = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
@@ -118,6 +126,9 @@ education.display = function() {
   }
 };
 
+/**
+ * @description Appends work JSON data to index.html
+ */
 work.display = function() {
   this.jobs.forEach(function(job) {
     var employer = HTMLworkEmployer.replace("%data%", job.employer).replace("#", job.url);
@@ -134,6 +145,9 @@ work.display = function() {
   });
 };
 
+/**
+ * @description Appends project JSON data to index.html
+ */
 projects.display = function() {
   this.projects.forEach(function(project) {
     var title = HTMLprojectTitle.replace("%data%", project.title);
@@ -149,6 +163,9 @@ projects.display = function() {
   });
 };
 
+/**
+ * Appends a google map to index.html
+ */
 function mapDisplay() {
   $("#mapDiv").append(googleMap);
 }
