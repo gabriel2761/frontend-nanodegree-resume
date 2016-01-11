@@ -37,7 +37,8 @@ var work = {
     "title": "Face-to-Face Promotions",
     "location": "Sydney, Australia",
     "dates": "2012 September - 2012 December",
-    "description": "Handing out flyers in Sydney CBD to promote a real estate seminar"
+    "description": "Handing out flyers in Sydney CBD to promote a real estate seminar",
+    "url" : "http://parktrent.com.au/seminars/upcoming-seminars/"
   }],
 };
 
@@ -46,7 +47,7 @@ var projects = {
     "title": "Front-End Portfolio",
     "dates": "2016 January",
     "description": "Create a page to feature web development projects",
-    "image": ["http://placehold.it/60x60"]
+    "image": ["https://placehold.it/60x60"]
   }]
 };
 
@@ -115,7 +116,7 @@ education.display = function() {
 
 work.display = function() {
   this.jobs.forEach(function(job) {
-    var employer = HTMLworkEmployer.replace("%data%", job.employer);
+    var employer = HTMLworkEmployer.replace("%data%", job.employer).replace("#", job.url);
     var title = HTMLworkTitle.replace("%data%", job.title);
     var dates = HTMLworkDates.replace("%data%", job.dates);
     var description = HTMLworkDescription.replace("%data%", job.description);
