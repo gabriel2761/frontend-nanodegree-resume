@@ -149,7 +149,9 @@ projects.display = function() {
   });
 };
 
-$("#mapDiv").append(googleMap);
+function mapDisplay() {
+  $("#mapDiv").append(googleMap);
+}
 
 /* CALL JSON DISPLAY METHODS */
 
@@ -157,3 +159,4 @@ bio.display();
 projects.display();
 education.display();
 work.display();
+mapDisplay();
