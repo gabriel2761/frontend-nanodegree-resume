@@ -74,7 +74,7 @@ bio.display = function() {
 
   this.skills.forEach(function(skill) {
     skill = HTMLskills.replace("%data%", skill);
-    $("#header").append(skill);
+    $("#skills").append(skill);
   });
 
 };
