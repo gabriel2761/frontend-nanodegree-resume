@@ -182,7 +182,7 @@ function initializeMap() {
 
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
-    bounds.extend(new google.maps.LatLng(lat, lon));
+    // bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
     // map.fitBounds(bounds);
     // center the map
@@ -223,7 +223,7 @@ function initializeMap() {
   }
 
   // Sets the boundaries of the map based on pin locations
-  window.mapBounds = new google.maps.LatLngBounds();
+  // window.mapBounds = new google.maps.LatLngBounds();
 
   // locations is an array of location strings returned from locationFinder()
   locations = locationFinder();
