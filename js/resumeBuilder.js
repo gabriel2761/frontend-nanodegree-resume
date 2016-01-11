@@ -164,7 +164,7 @@ projects.display = function() {
 };
 
 /**
- * Appends a google map to index.html
+ * @description Appends a google map to index.html
  */
 function mapDisplay() {
   $("#mapDiv").append(googleMap);
