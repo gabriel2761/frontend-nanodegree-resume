@@ -20,13 +20,13 @@ var education = {
     "location": "Sydney, Australia",
     "degree": "Bachelour of Science in Information Technology, Diploma of Professional Practice",
     "majors": ["Enterprise Systems Development"],
-    "dates": "2014-28-3 - present",
+    "dates": "2014 Febuary - present",
     "url": "http://handbook.uts.edu.au/courses/c10345.html"
   }],
   "onlineCourses": [{
     "title": "Front-End Developer Nanodegree",
     "school": "Udacity",
-    "dates": "2016-1-5 - present",
+    "dates": "2016 January - present",
     "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
   }]
 };
@@ -36,15 +36,15 @@ var work = {
     "employer": "ParkTrent Properties Group",
     "title": "Face-to-Face Promotions",
     "location": "Sydney, Australia",
-    "dates": "2012-9-10",
-    "description": "Promoting a real estate seminar"
+    "dates": "2012 September - 2012 December",
+    "description": "Handing out flyers in Sydney CBD to promote a real estate seminar"
   }],
 };
 
 var projects = {
   "projects": [{
-    "title": "Front-end Portfolio",
-    "dates": "2016-1-7",
+    "title": "Front-End Portfolio",
+    "dates": "2016 January",
     "description": "Create a page to feature web development projects",
     "image": ["http://placehold.it/60x60"]
   }]
