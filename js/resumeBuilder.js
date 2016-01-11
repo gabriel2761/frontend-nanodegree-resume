@@ -69,6 +69,10 @@ bio.display = function() {
   $("#topContacts").append(github);
   $("#topContacts").append(location);
 
+  $("#footerContacts").append(email);
+  $("#footerContacts").append(github);
+  $("#footerContacts").append(location);
+
   $("#header").append(biopic);
   $("#header").append(welcomeMessage);
   $("#header").append(HTMLskillsStart);
