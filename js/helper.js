@@ -107,15 +107,14 @@ function initializeMap() {
 
   var locations;
 
-  var mapOptions = {
-    disableDefaultUI: true
-  };
-
   /*
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js.
   */
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+  map = new google.maps.Map(document.querySelector('#map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 7
+  });
 
 
   /*
@@ -185,7 +184,7 @@ function initializeMap() {
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
-    map.fitBounds(bounds);
+    // map.fitBounds(bounds);
     // center the map
     map.setCenter(bounds.getCenter());
   }
