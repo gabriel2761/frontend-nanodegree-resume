@@ -60,15 +60,14 @@ var projects = {
  * @description Appends bio JSON data to index.html
  */
 bio.display = function() {
-  var name = HTMLheaderName.replace('%data%', this.name);
-  var role = HTMLheaderRole.replace('%data%', this.role);
-
-  var mobile = HTMLmobile.replace('%data%', this.contacts.mobile);
-  var email = HTMLemail.replace('%data%', this.contacts.email);
-  var github = HTMLgithub.replace('%data%', this.contacts.github);
-  var location = HTMLlocation.replace('%data%', this.contacts.location);
-  var biopic = HTMLbioPic.replace('%data%', this.biopic);
-  var welcomeMessage = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
+  var name = HTMLheaderName.replace('%data%', this.name),
+    role = HTMLheaderRole.replace('%data%', this.role),
+    mobile = HTMLmobile.replace('%data%', this.contacts.mobile),
+    email = HTMLemail.replace('%data%', this.contacts.email),
+    github = HTMLgithub.replace('%data%', this.contacts.github),
+    location = HTMLlocation.replace('%data%', this.contacts.location),
+    biopic = HTMLbioPic.replace('%data%', this.biopic),
+    welcomeMessage = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
 
   $('#header').prepend(name + role)
     .append(biopic)
@@ -95,10 +94,10 @@ bio.display = function() {
  */
 education.display = function() {
   this.schools.forEach(function(school) {
-    var name = HTMLschoolName.replace('%data%', school.name).replace('#', school.url);
-    var dates = HTMLschoolDates.replace('%data%', school.dates);
-    var degree = HTMLschoolDegree.replace('%data%', school.degree);
-    var location = HTMLschoolLocation.replace('%data%', school.location);
+    var name = HTMLschoolName.replace('%data%', school.name).replace('#', school.url),
+      dates = HTMLschoolDates.replace('%data%', school.dates),
+      degree = HTMLschoolDegree.replace('%data%', school.degree),
+      location = HTMLschoolLocation.replace('%data%', school.location);
 
     $('#education').append(HTMLschoolStart);
     $('.education-entry:last').append(name + degree)
@@ -114,10 +113,10 @@ education.display = function() {
   if (this.onlineCourses.length > 0) {
     $('#education').append(HTMLonlineClasses);
     this.onlineCourses.forEach(function(course) {
-      var title = HTMLonlineTitle.replace('%data%', course.title).replace('#', course.url);
-      var school = HTMLonlineSchool.replace('%data%', course.school);
-      var dates = HTMLonlineDates.replace('%data%', course.dates);
-      var url = HTMLonlineURL.replace('#', course.url).replace('%data%', 'info');
+      var title = HTMLonlineTitle.replace('%data%', course.title).replace('#', course.url),
+        school = HTMLonlineSchool.replace('%data%', course.school),
+        dates = HTMLonlineDates.replace('%data%', course.dates),
+        url = HTMLonlineURL.replace('#', course.url).replace('%data%', 'info');
 
       $('#education').append(HTMLschoolStart);
       $('.education-entry:last').append(title + school)
@@ -132,11 +131,11 @@ education.display = function() {
  */
 work.display = function() {
   this.jobs.forEach(function(job) {
-    var employer = HTMLworkEmployer.replace('%data%', job.employer).replace('#', job.url);
-    var title = HTMLworkTitle.replace('%data%', job.title);
-    var dates = HTMLworkDates.replace('%data%', job.dates);
-    var description = HTMLworkDescription.replace('%data%', job.description);
-    var location = HTMLworkLocation.replace('%data%', job.location);
+    var employer = HTMLworkEmployer.replace('%data%', job.employer).replace('#', job.url),
+      title = HTMLworkTitle.replace('%data%', job.title),
+      dates = HTMLworkDates.replace('%data%', job.dates),
+      description = HTMLworkDescription.replace('%data%', job.description),
+      location = HTMLworkLocation.replace('%data%', job.location);
 
     $('#workExperience').append(HTMLworkStart);
     $('.work-entry:last').append(employer + title)
@@ -151,10 +150,10 @@ work.display = function() {
  */
 projects.display = function() {
   this.projects.forEach(function(project) {
-    var title = HTMLprojectTitle.replace('%data%', project.title).replace('#', project.url);
-    var dates = HTMLprojectDates.replace('%data%', project.dates);
-    var description = HTMLprojectDescription.replace('%data%', project.description);
-    var image = HTMLprojectImage.replace('%data%', project.image);
+    var title = HTMLprojectTitle.replace('%data%', project.title).replace('#', project.url),
+      dates = HTMLprojectDates.replace('%data%', project.dates),
+      description = HTMLprojectDescription.replace('%data%', project.description),
+      image = HTMLprojectImage.replace('%data%', project.image);
 
     $('#projects').append(HTMLprojectStart);
     $('.project-entry:last').append(title)
