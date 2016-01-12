@@ -11,7 +11,7 @@ var bio = {
   },
   "welcomeMessage": "Welcome to my portfolio",
   "skills": ["Javascript", "HTML5", "CSS3", "Sass", "Bootstrap", "JQuery", "Git", "Polymer", "Php", "Java", "Bash"],
-  "biopic": "../images/gabriel.jpg",
+  "biopic": "images/gabriel.jpg",
 };
 
 var education = {
