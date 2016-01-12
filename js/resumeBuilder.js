@@ -70,18 +70,18 @@ bio.display = function() {
   var biopic = HTMLbioPic.replace('%data%', this.biopic);
   var welcomeMessage = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
 
-  $('#header').prepend(name + role);
-  $('#topContacts').append(email);
-  $('#topContacts').append(github);
-  $('#topContacts').append(location);
+  $('#header').prepend(name + role)
+    .append(biopic)
+    .append(welcomeMessage)
+    .append(HTMLskillsStart);
 
-  $('#footerContacts').append(email);
-  $('#footerContacts').append(github);
-  $('#footerContacts').append(location);
+  $('#topContacts').append(email)
+    .append(github)
+    .append(location);
 
-  $('#header').append(biopic);
-  $('#header').append(welcomeMessage);
-  $('#header').append(HTMLskillsStart);
+  $('#footerContacts').append(email)
+    .append(github)
+    .append(location);
 
   this.skills.forEach(function(skill) {
     skill = HTMLskills.replace('%data%', skill);
@@ -101,9 +101,9 @@ education.display = function() {
     var location = HTMLschoolLocation.replace('%data%', school.location);
 
     $('#education').append(HTMLschoolStart);
-    $('.education-entry:last').append(name + degree);
-    $('.education-entry:last').append(dates);
-    $('.education-entry:last').append(location);
+    $('.education-entry:last').append(name + degree)
+      .append(dates)
+      .append(location);
 
     school.majors.forEach(function(major) {
       var subject = HTMLschoolMajor.replace('%data%', major);
@@ -120,9 +120,9 @@ education.display = function() {
       var url = HTMLonlineURL.replace('#', course.url).replace('%data%', 'info');
 
       $('#education').append(HTMLschoolStart);
-      $('.education-entry:last').append(title + school);
-      $('.education-entry:last').append(dates);
-      $('.education-entry:last').append(url);
+      $('.education-entry:last').append(title + school)
+        .append(dates)
+        .append(url);
     });
   }
 };
@@ -139,10 +139,10 @@ work.display = function() {
     var location = HTMLworkLocation.replace('%data%', job.location);
 
     $('#workExperience').append(HTMLworkStart);
-    $('.work-entry:last').append(employer + title);
-    $('.work-entry:last').append(dates);
-    $('.work-entry:last').append(location);
-    $('.work-entry:last').append(description);
+    $('.work-entry:last').append(employer + title)
+      .append(dates)
+      .append(location)
+      .append(description);
   });
 };
 
@@ -157,10 +157,10 @@ projects.display = function() {
     var image = HTMLprojectImage.replace('%data%', project.image);
 
     $('#projects').append(HTMLprojectStart);
-    $('.project-entry:last').append(title);
-    $('.project-entry:last').append(dates);
-    $('.project-entry:last').append(description);
-    $('.project-entry:last').append(image);
+    $('.project-entry:last').append(title)
+      .append(dates)
+      .append(description)
+      .append(image);
   });
 };
 
